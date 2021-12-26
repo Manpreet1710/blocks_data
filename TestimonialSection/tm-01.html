@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<style>
+    :root {
+        --primary: #4b3df0e6;
+        --secondary: #fff;
+        --tertiary: blue;
+        --txt-primary: #fff;
+        --txt-secondary: rgb(241, 239, 239);
+    }
+
+    .background-primary {
+        background: var(--primary);
+    }
+
+    .background-secondary {
+        background: var(--secondary);
+    }
+
+    .background-tertiary {
+        background: var(--tertiary);
+
+    }
+
+    .txt-primary {
+        color: var(--txt-primary);
+    }
+
+    .txt-secondary {
+        color: var(--txt-secondary);
+
+    }
+
+    .tm-01 {
+        padding: 40px;
+    }
+
+    .tm-01 h2 {
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    .tm-01 img {
+        width: 150px;
+    }
+
+    .rounded-full {
+        border-radius: 9999px;
+        border-top-left-radius: 9999px;
+        border-top-right-radius: 9999px;
+        border-bottom-right-radius: 9999px;
+        border-bottom-left-radius: 9999px;
+    }
+
+    @media (max-width:768px) {
+        .tm-01 h2 {
+            font-size: 20px;
+        }
+    }
+</style>
+
+
+
+<section class="tm-01 background-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="txt-secondary">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s.
+                </h2>
+                <img alt="product" class="h-auto rounded-full mb-6"
+                    src="https://templates.versoly.com/assets/img/headshot-woman-1.jpg" />
+                <p class="txt-primary">
+                    Rhiana Bostock<br />Head of Marketing at ACME
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
