@@ -4,9 +4,9 @@
     :root {
         --primary: #4b3df0e6;
         --secondary: #fff;
-        --tertiary: blue;
-        --txt-primary: #fff;
-        --txt-secondary: rgb(241, 239, 239);
+        --tertiary: #fff;
+        --txt-primary: #000;
+        --txt-secondary: #000;
     }
 
     .background-primary {
@@ -31,6 +31,14 @@
 
     }
 
+    .rounded-full {
+        border-radius: 9999px;
+        border-top-left-radius: 9999px;
+        border-top-right-radius: 9999px;
+        border-bottom-right-radius: 9999px;
+        border-bottom-left-radius: 9999px;
+    }
+
     .tm-02 {
         padding: 40px;
     }
@@ -41,7 +49,7 @@
     }
 
     .tm-02 img {
-        width: 150px;
+        width: 180px;
     }
 
     .rounded-full {
@@ -53,6 +61,10 @@
     }
 
     @media (max-width:768px) {
+        .img-fluid {
+            text-align: center;
+        }
+
         .tm-02 h2 {
             font-size: 20px;
         }
@@ -61,11 +73,11 @@
 
 
 <section class="tm-02 background-tertiary">
-    <div class="container" eid="6c0df620-7eba-4de2-9a64-437361453d79">
-        <div class="row text-center justify-center pb-12" eid="e2a8b37d-332d-49d8-b885-37c08776d3b4" style="">
-            <div class="col md:w-10/12 lg:w-8/12 xl:w-7/12" eid="d4460c77-c254-4e4c-be89-065276790007">
-                <h1 eid="46e97283-2941-400b-9d80-94360c98ce6b">Testimonials</h1>
-                <p class="text-lg font-light" eid="694797bd-206e-4b16-81b4-3cc0ff952657" style="">
+    <div class="container">
+        <div class="row align-items-center justify-center">
+            <div class="col">
+                <h1 class="txt-primary">Testimonials</h1>
+                <p class="text-lg font-light txt-secondary">
                     Sed sodales tincidunt mi ut aliquam. Nulla facilisi. Quisque
                     elementum dui et dapibus pellentesque. Aliquam erat volutpat.
                     Morbi interdum, neque vitae iaculis ultrices, turpis ipsum
@@ -73,88 +85,28 @@
                 </p>
             </div>
         </div>
-        <div class="row items-center justify-center" eid="baaea1f6-1148-41eb-a1f5-23284511610c">
-            <div class="col" eid="6cbb027f-3fd2-4a7b-8c55-32f1f76b30d4">
-                <div class="
-              relative
-              flex flex-col
-              min-w-0
-              rounded
-              break-words
-              border
-              bg-white
-              border-1 border-grey-light
-              p-12
-            " eid="1cd8f844-c19a-46e1-ae77-db80ea1c642a">
-                    <div class="row" eid="6fc5b35c-dd04-46a0-a896-93c7aeee7608">
-                        <div class="row items-center justify-center" eid="c4ea4c52-47a8-47ba-b6b0-9f7bc07110a5"
-                            style="">
-                            <div class="
-                    col
-                    w-10/12
-                    sm:w-6/12
-                    md:w-4/12
-                    lg:w-3/12
-                    xl:w-2/12
-                    m-auto
-                  " eid="9795c24e-2908-4291-b10d-cca90cf72e01">
-                                <img alt="product" class="max-w-full h-auto rounded-full"
-                                    src="https://templates.versoly.com/assets/img/headshot-woman-1.jpg"
-                                    eid="7b09e7b1-7d90-43d1-bb22-3fdfbaeb4afc" />
-                            </div>
-                            <div class="col md:w-8/12 ml-auto mr-auto mt-6 md:mt-0"
-                                eid="ad085c6a-07c6-4703-af11-a02cbbfaa963">
-                                <p class="text-lg font-light" eid="215d2755-c817-4dee-abfa-b0dbeb46e321">
-                                    &amp;quot;Pellentesque iaculis vestibulum convallis.
-                                    Vestibulum nec risus tincidunt, eleifend lacus a, rhoncus
-                                    elit. Ut tellus urna, malesuada eu faucibus nec, consequat
-                                    vel elit. Curabitur nec tristique nunc.&amp;quot;
-                                </p>
-                                <p class="h3 mt-6 lg:mt-12" eid="5c719a0f-b71a-432a-8137-4c8fc46c8066">
-                                    <strong eid="1f26ddbf-4fa8-49be-8b8e-08177eca3ab4">Rhiana Bostock</strong>
-                                </p>
-                                <p eid="d73d7bd2-d2d9-48eb-9fd1-75f0e948b857">
-                                    <em eid="ba61eea4-acd5-47c7-b535-19b4be4405df">Co-founder at ACME</em>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="row align-items-center justify-center mt-5">
+            <div class="col-md-6">
+                <div class="img-fluid mb-2 mb-md-0">
+                    <img class="max-w-full h-auto rounded-full"
+                        src="https://templates.versoly.com/assets/img/headshot-woman-1.jpg" alt="ts-02" />
                 </div>
+            </div>
+            <div class="col-md-6">
+                <p class="text-lg font-light txt-secondary">
+                    Pellentesque iaculis vestibulum convallis.
+                    Vestibulum nec risus tincidunt, eleifend lacus a, rhoncus
+                    elit. Ut tellus urna, malesuada eu faucibus nec, consequat
+                    vel elit. Curabitur nec tristique nunc.&amp;quot;
+                </p>
+                <p class="h3 mt-6 lg:mt-12 txt-primary">
+                    <strong>Rhiana Bostock</strong>
+                </p>
+                <p class="txt-secondary">
+                    <em>Co-founder at ACME</em>
+                </p>
             </div>
         </div>
     </div>
 </section>
-<style>
-    .rounded-full {
-        border-radius: 9999px;
-        border-top-left-radius: 9999px;
-        border-top-right-radius: 9999px;
-        border-bottom-right-radius: 9999px;
-        border-bottom-left-radius: 9999px;
-    }
-
-    .h-auto {
-        height: 300px !important;
-    }
-
-    .col {
-        width: 100%;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-
-    .mr-auto {
-        margin-right: auto;
-    }
-
-    .ml-auto {
-        margin-left: auto;
-    }
-
-    p.text-lg.font-light {
-        margin: auto;
-        padding: initial;
-        padding-bottom: 69px;
-        padding-top: 43px;
-    }
-</style>
