@@ -1,0 +1,375 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link defer="defer" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    :root {
+        --primary: #3c50e0 !important;
+        --secondary: rgba(255, 255, 255);
+        --tertiary: #f3f4fb;
+        --txt-primary: #222831;
+        --txt-secondary: #222831;
+    }
+
+    .divider {
+        border: 2px solid #09b3ef;
+        position: relative;
+        display: block;
+        margin: auto;
+        width: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .divider::before {
+        position: absolute;
+        content: '';
+        bottom: -8px;
+        right: 0;
+        width: 50px;
+        height: 1px;
+        background: #09b3ef;
+        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+
+    .divider::after {
+        position: absolute;
+        content: '';
+        top: -8px;
+        left: 0;
+        width: 50px;
+        height: 1px;
+        background: var(--primary);
+        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+
+    .background-primary {
+        background: var(--primary);
+        fill: rgba(9, 179, 239, 0.9);
+    }
+
+    .background-tertiary {
+        background: var(--tertiary);
+    }
+
+    .color-tertiary {
+        background: var(--tertiary);
+    }
+
+    .color-primary {
+        color: var(--primary) !important;
+    }
+
+    .background-secondary {
+        background: var(--secondary);
+    }
+
+    .color-secondary {
+        color: var(--secondary);
+    }
+
+    .txt-primary {
+        color: var(--txt-primary);
+    }
+
+    .txt-secondary {
+        color: var(--txt-secondary);
+    }
+
+    .border-primary {
+        border-color: var(--primary);
+    }
+
+    .border-tertiary {
+        border-color: var(--tertiary);
+    }
+
+    .border-secondary {
+        border-color: var(--secondary) !important;
+    }
+
+    .hover-primary:hover {
+        background-color: var(--primary);
+    }
+
+    .hover-tertiary:hover {
+        background-color: var(--tertiary);
+    }
+
+    .hover-secondary:hover {
+        background-color: var(--tertiary);
+    }
+
+    .hover-color-primary:hover {
+        color: var(--primary);
+    }
+
+    .hover-color-tertiary:hover {
+        color: var(--tertiary);
+    }
+
+    .hover-color-secondary:hover {
+        color: var(--tertiary);
+    }
+
+    .secondary-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .secondary-scrollbar::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .secondary-scrollbar::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);
+        border-radius: 8px;
+    }
+
+
+    .main-btn {
+        border-width: 1px 1px 1px 1px;
+        margin: 10px 0px 0px 0px;
+        padding: 15px 21px 15px 21px;
+        font-weight: 700;
+        border-radius: 0;
+    }
+
+    .main-btn-bg {
+        background: var(--primary);
+    }
+
+    .btn-design {
+        padding: 12px 28px;
+        font-weight: 600;
+        font-size: 15px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        -webkit-border-radius: 90px;
+        -moz-border-radius: 90px;
+        border-radius: 0px !important;
+        margin: 2px;
+    }
+
+    a.btn-icon {
+        font-size: 30px;
+    }
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        margin: 0;
+        width: 100vw;
+        z-index: 0;
+    }
+
+
+
+    .app-features p,
+    .pricing-section p {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+
+    .icon {
+        display: inline-flex;
+        min-width: 2.75rem;
+        min-height: 2.75rem;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
+        color: inherit;
+        transition: all 0.3s ease-in;
+    }
+
+    .icon-shape {
+        text-align: center;
+        border-radius: 0.25rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pricing-card {
+        text-align: center;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        transition: all 0.3s ease-in;
+    }
+
+    .pricing-card .pricing-card-header {
+        border-bottom: 1px dashed #fff;
+        padding: 35px 0px 0px 0px;
+    }
+
+    .pricing-card .pricing-card-header h4 {
+        font-size: 25px;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+
+    .pricing-card .pricing-card-header span {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .pricing-card .pricing-card-content {
+        padding: 40px 20px;
+    }
+
+    .pricing-card .pricing-card-content .price-icon-sign {
+        position: relative;
+        top: -30px;
+        font-size: 20px;
+    }
+
+    .pricing-card .pricing-card-content .main-price {
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 0.5;
+    }
+
+    .pricing-card .pricing-card-content .sub-price {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .pricing-card .pricing-card-content .main-price-info {
+        position: relative;
+        display: block;
+        letter-spacing: 1px;
+    }
+
+    .pricing-card .pricing-card-content .main-price-info:before {
+        font-size: 22px;
+        font-weight: 300;
+        content: '/';
+        margin-right: 3px;
+    }
+
+    .pricing-card:hover {
+        -webkit-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        -moz-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        -o-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        -webkit-transform: translate(0, -5px);
+        -moz-transform: translate(0, -5px);
+        -ms-transform: translate(0, -5px);
+        -o-transform: translate(0, -5px);
+        transform: translate(0, -5px);
+    }
+
+    .pricing-card .plan-lists {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    .pricing-card .plan-lists li {
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+</style>
+<section class="pricing-section background-secondary p-5">
+    <div class="container">
+        <h3 class="text-center txt-primary font-weight-bolder">Pricing Plan</h3>
+        <div class="divider"></div>
+
+        <div class="col-md-7 mx-auto">
+            <p class="txt-secondary mt-4 text-center">we believe in making simple and fair pricing plans. Choose
+                your next successful plan and get started today!.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-card background-tertiary">
+                    <div class="pricing-card-header">
+                        <h4 class="txt-primary">Basic</h4>
+                    </div>
+                    <ul class="list-unstyled plan-lists txt-secondary">
+                        <li>Free Setup</li>
+                        <li>Unlimited Bandwidth</li>
+                        <li>50Gb Storage</li>
+                        <li>10 Email Account</li>
+                        <li>100Gb Disk Space </li>
+                    </ul>
+                    <div class="pricing-card-content txt-secondary">
+                        <div class="mb-40">
+                            <span class="price-icon-sign background-tertiary"><i class="fas fa-dollar-sign"></i></span>
+                            <span class="main-price">7.</span>
+                            <span class="sub-price">00</span>
+                            <span class="main-price-info">Month</span>
+                        </div>
+                        <div class="center-block">
+                            <button type="button"
+                                class="btn btn-design background-primary color-secondary mt-5">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card background-tertiary">
+                    <div class="pricing-card-header">
+                        <h4 class="txt-primary">Premium</h4>
+                    </div>
+                    <ul class="list-unstyled plan-lists txt-secondary">
+                        <li>Free Setup</li>
+                        <li>Unlimited Bandwidth</li>
+                        <li>50Gb Storage</li>
+                        <li>10 Email Account</li>
+                        <li>100Gb Disk Space </li>
+                    </ul>
+                    <div class="pricing-card-content txt-secondary">
+                        <div class="mb-40">
+                            <span class="price-icon-sign background-tertiary"><i class="fas fa-dollar-sign"></i></span>
+                            <span class="main-price"> 15.</span>
+                            <span class="sub-price">00</span>
+                            <span class="main-price-info">Month</span>
+                        </div>
+                        <div class="center-block">
+                            <button type="button"
+                                class="btn btn-design background-primary color-secondary mt-5">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card background-tertiary">
+                    <div class="pricing-card-header">
+                        <h4 class="txt-primary">Ultimate</h4>
+                    </div>
+                    <ul class="list-unstyled plan-lists txt-secondary">
+                        <li>Free Setup</li>
+                        <li>Unlimited Bandwidth</li>
+                        <li>50Gb Storage</li>
+                        <li>10 Email Account</li>
+                        <li>100Gb Disk Space </li>
+                    </ul>
+                    <div class="pricing-card-content txt-secondary">
+                        <div class="mb-40">
+                            <span class="price-icon-sign background-tertiary"><i class="fas fa-dollar-sign"></i></span>
+                            <span class="main-price">23.</span>
+                            <span class="sub-price">00</span>
+                            <span class="main-price-info">Month</span>
+                        </div>
+                        <div class="center-block">
+                            <button type="button"
+                                class="btn btn-design background-primary color-secondary mt-5">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

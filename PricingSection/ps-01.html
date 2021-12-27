@@ -2,24 +2,78 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <style>
     :root {
-        --primary: #4b3df0e6;
-        --secondary: #fff;
-        --tertiary: #fff;
-        --txt-primary: #000;
-        --txt-secondary: #000;
+        --primary: #3c50e0 !important;
+        --secondary: rgba(255, 255, 255);
+        --tertiary: #f3f4fb;
+        --txt-primary: #222831;
+        --txt-secondary: #222831;
+    }
+
+    .divider {
+        border: 2px solid #09b3ef;
+        position: relative;
+        display: block;
+        margin: auto;
+        width: 30px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .divider::before {
+        position: absolute;
+        content: '';
+        bottom: -8px;
+        right: 0;
+        width: 50px;
+        height: 1px;
+        background: #09b3ef;
+        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+    }
+
+    .divider::after {
+        position: absolute;
+        content: '';
+        top: -8px;
+        left: 0;
+        width: 50px;
+        height: 1px;
+        background: var(--primary);
+        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
     }
 
     .background-primary {
         background: var(--primary);
+        fill: rgba(9, 179, 239, 0.9);
+    }
+
+    .background-tertiary {
+        background: var(--tertiary);
+    }
+
+    .color-tertiary {
+        background: var(--tertiary);
+    }
+
+    .color-primary {
+        color: var(--primary) !important;
     }
 
     .background-secondary {
         background: var(--secondary);
     }
 
-    .background-tertiary {
-        background: var(--tertiary);
-
+    .color-secondary {
+        color: var(--secondary);
     }
 
     .txt-primary {
@@ -28,171 +82,253 @@
 
     .txt-secondary {
         color: var(--txt-secondary);
-
     }
 
-    .ps-01 {
-        padding: 80px;
+    .border-primary {
+        border-color: var(--primary);
     }
 
-    .ps-01 h2 {
-        font-weight: 900;
-        font-size: 35px;
+    .border-tertiary {
+        border-color: var(--tertiary);
     }
 
-    .ps-01 img {
-        width: 80px;
+    .border-secondary {
+        border-color: var(--secondary) !important;
     }
 
-    @media (max-width:768px) {
-        .ps-01 h2 {
-            font-size: 25px;
-        }
+    .hover-primary:hover {
+        background-color: var(--primary);
+    }
+
+    .hover-tertiary:hover {
+        background-color: var(--tertiary);
+    }
+
+    .hover-secondary:hover {
+        background-color: var(--tertiary);
+    }
+
+    .hover-color-primary:hover {
+        color: var(--primary);
+    }
+
+    .hover-color-tertiary:hover {
+        color: var(--tertiary);
+    }
+
+    .hover-color-secondary:hover {
+        color: var(--tertiary);
+    }
+
+    .secondary-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .secondary-scrollbar::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .secondary-scrollbar::-webkit-scrollbar-thumb {
+        background-color: var(--secondary);
+        border-radius: 8px;
+    }
+
+
+    .main-btn {
+        border-width: 1px 1px 1px 1px;
+        margin: 10px 0px 0px 0px;
+        padding: 15px 21px 15px 21px;
+        font-weight: 700;
+        border-radius: 0;
+    }
+
+    .main-btn-bg {
+        background: var(--primary);
+    }
+
+    .btn-design {
+        padding: 12px 28px;
+        font-weight: 600;
+        font-size: 15px;
+        border: none;
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        -webkit-border-radius: 90px;
+        -moz-border-radius: 90px;
+        border-radius: 0px !important;
+        margin: 2px;
+    }
+
+    a.btn-icon {
+        font-size: 30px;
+    }
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        margin: 0;
+        width: 100vw;
+        z-index: 0;
+    }
+
+
+
+    .app-features p,
+    .pricing-section-01 p {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+
+
+    .icon {
+        display: inline-flex;
+        min-width: 2.75rem;
+        min-height: 2.75rem;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
+        color: inherit;
+        transition: all 0.3s ease-in;
+    }
+
+    .icon-shape {
+        text-align: center;
+        border-radius: 0.25rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pricing-card-01 {
+        text-align: center;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        transition: all 0.3s ease-in;
+    }
+
+    .pricing-card-01 .pricing-card-01-header {
+        border-bottom: 1px dashed #fff;
+        padding: 35px 0px 0px 0px;
+    }
+
+    .pricing-card-01 .pricing-card-01-header h4 {
+        font-size: 25px;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+
+    .pricing-card-01 .pricing-card-01-header span {
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .pricing-card-01 .pricing-card-01-content {
+        padding: 40px 20px;
+    }
+
+    .pricing-card-01 .pricing-card-01-content .price-icon-sign {
+        position: relative;
+        top: -30px;
+        font-size: 20px;
+    }
+
+    .pricing-card-01 .pricing-card-01-content .main-price {
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 0.5;
+    }
+
+    .pricing-card-01 .pricing-card-01-content .sub-price {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .pricing-card-01 .pricing-card-01-content .main-price-info {
+        position: relative;
+        display: block;
+        letter-spacing: 1px;
+    }
+
+    .pricing-card-01 .pricing-card-01-content .main-price-info:before {
+        font-size: 22px;
+        font-weight: 300;
+        content: '/';
+        margin-right: 3px;
+    }
+
+    .pricing-card-01:hover {
+        -webkit-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        -moz-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        -o-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.13);
+        -webkit-transform: translate(0, -5px);
+        -moz-transform: translate(0, -5px);
+        -ms-transform: translate(0, -5px);
+        -o-transform: translate(0, -5px);
+        transform: translate(0, -5px);
+    }
+
+    .pricing-card-01 .plan-lists {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    .pricing-card-01 .plan-lists li {
+        font-size: 14px;
+        padding: 10px 0px;
     }
 </style>
 
-<div class="container">
-    <section class="py-28" id="pricing" eid="59a10a59-12aa-44d2-9c37-33ba7a8490bd" style="">
-        <div class="container" eid="3a409bca-945a-4aab-a72a-cb9d903d1eba">
-            <div class="row" eid="59610983-095e-4253-abb8-57111aacd1ad">
-                <div class="col md:w-10/12 lg:w-8/12 mx-auto text-center mb-6"
-                    eid="43f9011e-d1cc-4158-9eb6-d7eb346e85d3">
-                    <h2 class="display-6 font-semibold mb-3" eid="b743d604-e14f-4a06-b3b1-a8a7b86f631a" style="
-                   margin-bottom: 0.75rem;
-                   font-weight: 600;
-                   font-size: 2.5rem;
-                 ">
-                        Our Pricing
-                    </h2>
-                    <p eid="57e229df-dc1e-4b4e-986b-4e3d87f3fa7a" style="margin-bottom: 0.75rem">
-                        No additional costs. Pay a fixed monthly fee we handle
-                        everything for you.
-                    </p>
+<section class="pricing-section-01 background-secondary p-5">
+    <div class="container">
+        <h3 class="text-center txt-primary font-weight-bolder">Pricing Plan</h3>
+        <div class="col-md-7 mx-auto">
+            <p class="txt-secondary mt-4 text-center">we believe in making simple and fair pricing plans. Choose
+                your next successful plan and get started today!.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-card-01 background-tertiary">
+                    <div class="pricing-card-01-header">
+                        <h4 class="txt-primary">Basic</h4><span class="txt-secondary mt-2">Individual</span>
+                    </div>
+                    <div class="pricing-card-01-content txt-secondary">
+                        <div class="mb-40"><span class="price-icon-sign background-tertiary"><i
+                                    class="fas fa-dollar-sign"></i></span><span class="main-price">7.</span><span
+                                class="sub-price">00</span><span class="main-price-info">Month</span></div>
+                        <div class="center-block"><button type="button"
+                                class="btn background-primary color-secondary mt-5">Purchase</button></div>
+                    </div>
                 </div>
             </div>
-            <div class="row items-center" eid="02ec4e3e-0ba2-4557-afc0-863cb6581729">
-                <div class="col md:w-8/12" eid="a8e671cc-cb68-419a-bdc5-8e4d983e5a28" style="">
-                    <div class="row md:mr-6 lg:mb-12" eid="19445115-eb3a-4b13-9a76-df4d5394b011">
-                        <div class="col lg:w-6/12 mb-12" eid="5ce60280-10fb-40b7-be3b-2fc5713f2662">
-                            <div class="text-5xl text-primary mb-2" eid="ef30daaa-47e5-4a0b-adf6-07e12ab8cc70">
-                                <span>
-                                    <i class="fa fa-life-ring" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                            <h4 class="mb-2" eid="1ea4ca3a-8e8d-49e1-a44f-3cfec642a4d6">
-                                24/7 Friendly Support
-                            </h4>
-                            <p class="mb-0" eid="dc38f6f1-a615-46b8-b041-fa587af008b7">
-                                Our over 30 full-time experienced folks ready to help you
-                                anytime with any issues. Chat with us anytime.
-                            </p>
-                        </div>
-                        <div class="col lg:w-6/12 mb-12" eid="ea2c4e42-fc06-4f21-9ceb-aa0dd23cd90b" style="">
-                            <div class="text-5xl text-primary mb-2" eid="102f747a-446b-4656-8bb8-b77168996409">
-                                <span>
-                                    <i class="fa fa-bug" aria-hidden="true"></i>
-                                </span>
-                            </div>
-                            <h4 eid="1d4167ed-04a1-4703-9005-4fedd0c1b71d" style="">
-                                AI Autofix
-                            </h4>
-                            <p class="mb-0" eid="a02874b5-6259-4e9e-8221-d3a069bcf3a9" style="">
-                                Now, your server never shuts down. Our AI technology solves
-                                any issues on the server side and fixes instantly.
-                            </p>
-                        </div>
+            <div class="col-md-4">
+                <div class="pricing-card-01 background-tertiary">
+                    <div class="pricing-card-01-header">
+                        <h4 class="txt-primary">Premium</h4><span class="txt-secondary mt-2">Business</span>
                     </div>
-                    <div class="row md:mr-6" eid="b9f5a422-dd3a-45ff-815f-61608fb640e1">
-                        <div class="col lg:w-6/12 mb-12 lg:mb-0" eid="a9083cc3-4765-45ff-9ec0-aa1e26ef8dac">
-                            <div class="text-5xl text-primary mb-2" eid="2f6bd578-205d-44a1-8d8c-fdbe8ab7dddf">
-                                <i class="fa fa-star" eid="cab3e745-bed1-474f-ac69-028472ce99f4"></i>
-                            </div>
-                            <h4 eid="6d01a617-8908-4c6a-ba32-e295194cefd4">
-                                No additional costs
-                            </h4>
-                            <p class="mb-0" eid="c86b3879-b10c-4a32-b280-a0ee9e70964d">
-                                Choose the most suitable service for your needs with monthly
-                                fixed price.
-                            </p>
-                        </div>
-                        <div class="col lg:w-6/12 mb-12 lg:mb-0" eid="526638f2-aab3-46de-9fa8-1e83af2e747b">
-                            <span>
-                                <i class="fa fa-fire text-primary text-5xl"
-                                    eid="cab3e745-bed1-474f-ac69-028472ce99f4"></i>
-                            </span>
-
-                            <h4 eid="7bf17083-f141-4260-a7e4-cb557c6cfce4">
-                                Instant Results
-                            </h4>
-                            <p class="mb-0" eid="c9e107b4-1911-4d7b-bdcb-93894ded6389">
-                                No need to wait until your data is updated, now it will be
-                                updated instantly.
-                            </p>
-                        </div>
+                    <div class="pricing-card-01-content txt-secondary">
+                        <div class="mb-40"><span class="price-icon-sign background-tertiary"><i
+                                    class="fas fa-dollar-sign"></i></span><span class="main-price"> 15.</span><span
+                                class="sub-price">00</span><span class="main-price-info">Month</span></div>
+                        <div class="center-block"><button type="button"
+                                class="btn background-primary color-secondary mt-5">Purchase</button></div>
                     </div>
                 </div>
-                <div class="col md:w-4/12 my-12" eid="e446546b-0231-43ba-8a7f-ed10c1541f1e">
-                    <div class="
-                   card
-                   p-6
-                   text-center
-                   flex flex-col
-                   min-w-0
-                   rounded
-                   break-words
-                   border
-                   bg-white
-                   border-1 border-grey-light
-                 " eid="27f4cd66-3ca7-4122-9937-6c00fe8b25ef">
-                        <h2 class="block font-semibold mb-12" eid="55a8e802-3f68-4d34-b96f-2cb6673cda36">
-                            $15
-                            <small eid="67c98e68-42b4-44d1-863e-7259f3411ce8">per month</small>
-                        </h2>
-                        <ul class="list-unstyled mb-12" eid="9ea9344f-aeed-4976-ac98-87cc2953867d">
-                            <li class="mb-6" eid="fa4b98a9-2c5d-4f4b-a06d-5943f895be7b">
-                                200GB of Space
-                            </li>
-                            <li class="mb-6" eid="51c027ad-8dde-4f26-a8a4-950db71fdcec">
-                                Unlimited Traffic
-                            </li>
-                            <li class="mb-6" eid="913f3e72-ecf9-4a41-a9c0-08d614922f88">
-                                Online Support
-                            </li>
-                            <li class="mb-6" eid="f3abfab1-2422-4306-8293-2c183cb527cc">
-                                24 hour Support
-                            </li>
-                        </ul>
-                        <a class="btn btn-primary btn-lg w-full" href="javascript:void(0);"
-                            eid="524b6e41-6c6a-4a77-843c-a9378260a7cf">Get Started Now</a>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card-01 background-tertiary">
+                    <div class="pricing-card-01-header">
+                        <h4 class="txt-primary">Ultimate</h4><span class="txt-secondary mt-2">Enterprise</span>
+                    </div>
+                    <div class="pricing-card-01-content txt-secondary">
+                        <div class="mb-40"><span class="price-icon-sign background-tertiary"><i
+                                    class="fas fa-dollar-sign"></i></span><span class="main-price">23.</span><span
+                                class="sub-price">00</span><span class="main-price-info">Month</span></div>
+                        <div class="center-block"><button type="button"
+                                class="btn background-primary color-secondary mt-5">Purchase</button></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</div>
-<style>
-    .mb-12 {
-        margin-bottom: 3rem;
-        margin-top: 3rem;
-    }
-
-    .col {
-        width: 100%;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-
-    .text-primary {
-        --tw-text-opacity: 1;
-        color: rgba(79, 70, 229, var(--tw-text-opacity));
-    }
-
-    .mb-2 {
-        margin-bottom: 0.5rem;
-    }
-
-    .text-5xl {
-        font-size: 3rem;
-        line-height: 1;
-    }
-</style>
+    </div>
+</section>

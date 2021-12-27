@@ -1,0 +1,195 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link defer="defer" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    :root {
+        --primary: #0879FA;
+        --secondary: #000;
+        --tertiary: #fff;
+        --txt-primary: #0879FA;
+        --txt-secondary: #fff;
+        --color-secondary: #fff;
+    }
+
+    .color-secondary {
+        color: var(--color-secondary)
+    }
+
+    .background-primary {
+        background: var(--primary);
+    }
+
+    .background-secondary {
+        background: var(--secondary);
+    }
+
+    .background-tertiary {
+        background: var(--tertiary);
+
+    }
+
+    .txt-primary {
+        color: var(--txt-primary);
+    }
+
+    .txt-secondary {
+        color: var(--txt-secondary);
+
+    }
+
+    .ps-04 {
+        padding: 40px;
+    }
+
+    .ps-04 h2 {
+        font-weight: 900;
+        font-size: 35px;
+    }
+
+    .ps-04 img {
+        width: 80px;
+    }
+
+    .ps-04 ul {
+        list-style: none;
+    }
+
+    .ps-04 ul li {
+        padding: 10px 0;
+    }
+
+    .ps-04-box-shadow {
+        box-shadow: 0 1px 5px 3px rgb(0 0 0 / 5%);
+        padding-bottom: 35px;
+    }
+
+    .ps_01_btn,
+    .ps_03_btn {
+        border: none;
+        padding: 8px 15px;
+        box-shadow: 0 1px 5px 3px rgb(0 0 0 / 5%);
+    }
+
+    .ps_02_btn {
+        border: none;
+        padding: 8px 15px;
+    }
+
+    .monthly_btn_style {
+        border: none;
+        padding: 2px 15px;
+    }
+
+    .annual_btn_style {
+        border: none;
+        padding: 2px 15px;
+    }
+
+    @media (max-width:768px) {
+        .ps-04 h2 {
+            font-size: 25px;
+        }
+    }
+</style>
+
+<section class="ps-04">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12 text-center">
+                <h2 class="txt-primary font-weight-bolder">
+                    Our Pricing
+                </h2>
+                <p class="txt-secondary">
+                    No additional costs. Pay a fixed monthly fee we handle everything
+                    for you.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button class="background-primary monthly_btn_style text-white">
+                    Monthly
+                    <button class="annual_btn_style txt-primary">
+                        Annual
+                    </button>
+                </button>
+
+
+            </div>
+        </div>
+        <div class="row mt-4 text-center">
+            <div class="col-md-4 my-3">
+                <div class="card py-4">
+                    <div class="pl-3">
+                        <i class="fa fa-server fa-3x"></i>
+                        <br><br>
+                        <h2 class="font-weight-bolder mb-0">
+                            Free
+                        </h2>
+                        <h3 class="font-weight-bolder mb-3">
+                            $<span data-monthly="29" data-annual="24">29</span>
+                            <span class="text-2xl">/mo</span>
+                        </h3>
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <button class="background-secondary txt-secondary mx-5 btn-lg ps_01_btn">
+                        Try Now
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4 my-3">
+                <div class="card py-4 ">
+                    <div class="pl-3">
+                        <i class="txt-primary fa fa-server fa-3x"></i>
+                        <br><br>
+                        <h2 class="txt-primary font-weight-bolder mb-0">
+                            Startup
+                        </h2>
+                        <h3 class="txt-primary display-5 font-weight-bolder mb-3">
+                            $<span data-monthly="29" data-annual="24">99</span>
+                            <span class="text-2xl">/mo</span>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+
+                    <button class="background-primary text-white ps_02_btn mx-5 btn-lg">
+                        Try Now
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4 my-3">
+                <div class="card py-4">
+                    <div class="pl-3">
+                        <i class="fa fa-server fa-3x"></i>
+                        <br><br>
+                        <h2 class="font-weight-bolder mb-0">
+                            Agency
+                        </h2>
+                        <h3 class="display-5 font-weight-bolder mb-3">
+                            $<span data-monthly="29" data-annual="24">299</span>
+                            <span class="text-2xl">/mo</span>
+                        </h3>
+                        <p class="text-muted">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <button class="background-secondary txt-secondary ps_03_btn mx-5 btn-lg">
+                        Try Now
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
